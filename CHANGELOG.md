@@ -49,7 +49,7 @@ ______________________________________________________________________
 ### Changed
 
 - Do not force the project package name to be the same as the project name in the
-  `src/pyproject/__init__.py`. We must recover the package metadata stating the project name in the
+  `src/democliapp/__init__.py`. We must recover the package metadata stating the project name in the
   code.
 - Make the package metadata a public name of the project package.
 - Use `click` to create the command line interfaces for development tasks.

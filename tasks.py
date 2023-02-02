@@ -64,9 +64,9 @@ def _get_package_info():
 
 def _get_installed_package_info():
     """Return the name and version of the installed project package."""
-    import pyproject
+    import democliapp
 
-    return pyproject.metadata["name"], pyproject.__version__
+    return democliapp.metadata["name"], democliapp.__version__
 
 
 @app.command()
@@ -143,9 +143,9 @@ def upgrade():
 def version():
     """Show the installed project version."""
     try:
-        import pyproject
+        import democliapp
 
-        print(f"{pyproject.metadata['name']} {pyproject.__version__}")
+        print(f"{democliapp.metadata['name']} {democliapp.__version__}")
     except ModuleNotFoundError:
         raise click.ClickException(
             "The package 'pyproject' has not been installed."

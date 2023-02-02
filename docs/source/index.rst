@@ -1,9 +1,9 @@
-.. pyproject documentation master file, created by
+.. democliapp documentation master file, created by
    sphinx-quickstart on Sun Jul 25 01:46:17 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to pyproject's documentation!
+Welcome to democliapp's documentation!
 =====================================
 
 .. toctree::
