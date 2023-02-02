@@ -5,8 +5,9 @@ Demonstrate how to build a Command Line Interface application using Python.
 ## Installation of dependencies
 
 Dependencies are managed by [poetry], so it should be installed in the system. You should use poetry
-`1.2.2` or later, since the `poetry.lock` file format is compatible with those versions only. Then,
-in the project root directory, execute
+`1.2.2` or later, since the `poetry.lock` file format is compatible with those versions only. See
+[this page](https://python-poetry.org/blog/announcing-poetry-1.2.2/) for further details. Then, in
+the project root directory, execute
 
 ```shell
 poetry install
