@@ -3,7 +3,7 @@
 Versions follow [CalVer](https://calver.org). This changelog follows the style guides described on
 [https://keepachangelog.com/en/1.0.0/](https://keepachangelog.com/en/1.0.0/)
 
-## 2023.1.0.dev0 (Not yet released)
+## 23.2.0 (2023-02-16)
 
 ### Changed
 
