@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "democliapp"
 version = "23.2.1.dev0"
-description = "Demonstrate how to build a Command Line Interface application using Python."
+description = "Demonstrate how to build a Command Line Interfaces for your applications using Python."
 license = "Apache-2.0"
 authors = [
   "Omar Abel Rodríguez-López <oarodriguez.mx@gmail.com>"

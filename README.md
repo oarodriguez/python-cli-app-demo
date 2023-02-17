@@ -1,6 +1,6 @@
 # [python-demo-cli-app]
 
-Demonstrate how to build a Command Line Interface application using Python.
+Demonstrate how to build a Command Line Interfaces for your applications using Python.
 
 ## Installation of dependencies
 
