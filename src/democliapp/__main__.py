@@ -1,5 +1,5 @@
 """The package main entry point. It exposes the application CLI."""
-from .app import execute
+from .cli import exec_
 
 if __name__ == "__main__":
-    execute()
+    exec_()
