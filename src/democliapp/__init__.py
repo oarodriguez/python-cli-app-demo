@@ -1,4 +1,4 @@
-"""democliapp - A Pythonic CLI app.
+"""democliapp - An application with a Pythonic Command Line Interface.
 
 Copyright © 2023, Omar Abel Rodríguez-López.
 """

@@ -1,4 +1,4 @@
-"""The package main entry point. It exposes the project CLI."""
+"""The package main entry point. It exposes the application CLI."""
 from .app import execute
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Command line application definition."""
+"""Command line interface definition."""
 from argparse import ArgumentParser
 
 USAGE_HELP_TEXT = "An educational, Pythonic Command Line Application."
