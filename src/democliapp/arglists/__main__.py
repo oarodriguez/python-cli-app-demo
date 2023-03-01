@@ -4,12 +4,12 @@ import sys
 
 def print_usage():
     """Show how to use the program."""
-    print(f"Usage: {__package__} [-h/--help] ARG1 [ARG2 [ARG3]]")
+    print(f"Usage: {__package__} [-h] ARG1 [ARG2 [ARG3]]")
     print()
     print("Command line interface based on argument lists.")
     print()
     print("Options")
-    print("  -h/--help: show this help message and exit.")
+    print("  -h, --help: show this help message and exit.")
     # Finish the program with a SUCCESS status code.
     sys.exit(0)
 
