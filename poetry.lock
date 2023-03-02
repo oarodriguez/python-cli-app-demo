@@ -104,6 +104,21 @@ dev = ["cogapp", "pre-commit", "pytest", "wheel"]
 tests = ["pytest"]
 
 [[package]]
+name = "art"
+version = "5.8"
+description = "ASCII Art Library For Python"
+category = "main"
+optional = false
+python-versions = ">=2.7"
+files = [
+    {file = "art-5.8-py2.py3-none-any.whl", hash = "sha256:cd77a9dcfe49dfb82f37a7b2401ae771fde6e155942b4e3dbc50a68c2bc7027c"},
+    {file = "art-5.8.tar.gz", hash = "sha256:83e383910e07eb7844a6618498708e0080ea842d584128ee6b0dc62d8b48cf36"},
+]
+
+[package.extras]
+dev = ["bandit (>=1.5.1)", "codecov (>=2.0.15)", "coverage (>=4.1)", "pydocstyle (>=3.0.0)", "vulture (>=1.0)"]
+
+[[package]]
 name = "asttokens"
 version = "2.0.5"
 description = "Annotate AST trees with source code positions"
@@ -2878,4 +2893,4 @@ jupyterlab-lsp = ["jupyterlab-lsp", "jupyterlab-lsp"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.11"
-content-hash = "ee097e99b82d73c4c1856645dd88667ef78da7f8a0eb8f9f40cd9079f1437cc7"
+content-hash = "1df9fa9a96a7f1e92d45b6e2b54ffb29f6a7d7c35f192025068ff601b7bcd899"

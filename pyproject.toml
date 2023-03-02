@@ -46,6 +46,7 @@ jupytext = { version = ">=1.11.1", optional = true }
 # dependencies with Poetry.
 python-lsp-server = { version = ">=1.4.1", optional = true }
 jupyterlab-lsp = { version = ">=3.10.1", optional = true }
+art = ">=5.8"
 
 [tool.poetry.dev-dependencies]
 pytest = ">=6.2.2"
