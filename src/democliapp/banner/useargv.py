@@ -2,7 +2,9 @@
 import sys
 from dataclasses import dataclass
 
-from ..banner import Banner
+from .banner import Banner
+
+PROGRAM_NAME = f"{__package__}.useargv"
 
 DESCRIPTION_TEXT = """\
 Show a fancy banner using ASCII art. You may provide the optional
@@ -10,13 +12,13 @@ argument FONT-NAME to suggest a font for the banner text. The app
 will use the most appropriate font style based on the FONT-NAME."""
 
 BAD_USAGE_MESSAGE = f"""\
-Incorrect command invocation. Use {__package__} -h to see the the
+Incorrect command invocation. Use {PROGRAM_NAME} -h to see the the
 program correct usage."""
 
 
 def print_usage():
     """Show how to use the program."""
-    print(f"Usage: {__package__} [-h] HEADLINE [FONT-NAME]")
+    print(f"Usage: {PROGRAM_NAME} [-h] HEADLINE [FONT-NAME]")
     print()
     print(DESCRIPTION_TEXT)
     print()
@@ -62,6 +64,7 @@ def get_cli_arguments():
     return CLIArguments(script_name, headline, font_name)
 
 
-cli_args = get_cli_arguments()
-banner = Banner(headline=cli_args.headline, font_name=cli_args.font_name)
-print(banner.text)
+if __name__ == "__main__":
+    cli_args = get_cli_arguments()
+    banner = Banner(headline=cli_args.headline, font_name=cli_args.font_name)
+    print(banner.text)
