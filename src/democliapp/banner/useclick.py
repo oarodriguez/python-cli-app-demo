@@ -3,8 +3,9 @@ from typing import Optional
 
 from click import Group, argument, option
 
-from democliapp.banner.banner import Banner
+from .banner import Banner
 
+# Initialize the object that enables the CLI.
 app = Group()
 
 

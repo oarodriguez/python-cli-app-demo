@@ -20,7 +20,8 @@ parser.add_argument(
 
 if __name__ == "__main__":
     args: Namespace = parser.parse_args()
-    headline = getattr(args, "headline")
-    font_name = getattr(args, "font", None)
-    banner = Banner(headline=headline, font_name=font_name)
+    banner = Banner(
+        headline=getattr(args, "headline"),
+        font_name=getattr(args, "font", None),
+    )
     print(banner.text)
