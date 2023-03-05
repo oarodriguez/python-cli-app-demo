@@ -1,6 +1,5 @@
 """Demonstrate how to use argument lists to make a CLI."""
 import sys
-from dataclasses import dataclass
 
 from .banner import Banner
 
@@ -24,15 +23,6 @@ def print_usage():
     print()
     print("Options")
     print("  -h, --help: show this help message and exit.")
-
-
-@dataclass
-class CLIArguments:
-    """Represent the command line interface arguments."""
-
-    script_name: str
-    headline: str
-    font_name: str
 
 
 def get_cli_arguments():
@@ -61,10 +51,10 @@ def get_cli_arguments():
     else:
         (headline,) = args
         font_name = None
-    return CLIArguments(script_name, headline, font_name)
+    return script_name, headline, font_name
 
 
 if __name__ == "__main__":
-    cli_args = get_cli_arguments()
-    banner = Banner(headline=cli_args.headline, font_name=cli_args.font_name)
+    _, headline, font_name = get_cli_arguments()
+    banner = Banner(headline=headline, font_name=font_name)
     print(banner.text)

@@ -1,10 +1,12 @@
 """Demonstrate how to use argument lists to make a CLI."""
 import sys
 
+PROGRAM_NAME = f"{__package__}.useargv"
+
 
 def print_usage():
     """Show how to use the program."""
-    print(f"Usage: {__package__} [-h] ARG1 [ARG2 [ARG3]]")
+    print(f"Usage: {PROGRAM_NAME} [-h] ARG1 [ARG2 [ARG3]]")
     print()
     print("Command line interface based on argument lists.")
     print()
@@ -21,7 +23,7 @@ script_name, *extra_args = sys.argv
 extra_args_count = len(extra_args)
 if not extra_args_count or extra_args_count > 3:
     print(
-        f"Incorrect program invocation. Use {__package__} -h to see the "
+        f"Incorrect program invocation. Use {PROGRAM_NAME} -h to see the "
         f"the program correct usage."
     )
     # Finish the program with an error status code.
