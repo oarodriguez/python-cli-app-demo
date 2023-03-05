@@ -16,9 +16,6 @@ def print_usage():
     print("Optional Arguments")
     print("  ARG2: First optional argument.")
     print("  ARG3: Second optional argument.")
-    print()
-    print("Options")
-    print("  -h, --help: show this help message and exit.")
     # Finish the program with a SUCCESS status code.
     sys.exit(0)
 
@@ -28,18 +25,17 @@ def print_usage():
 extra_args: list[str]
 _, *extra_args = sys.argv
 extra_args_count = len(extra_args)
-if not extra_args_count or extra_args_count > 3:
+if not extra_args_count:
+    print_usage()
+    sys.exit(0)
+if extra_args_count > 3:
     print(
-        f"Incorrect program invocation. Use {PROGRAM_NAME} -h to see the "
+        f"Incorrect program invocation. Use {PROGRAM_NAME} to see the "
         f"the program correct usage."
     )
     # Finish the program with an error status code.
     sys.exit(1)
 
-if extra_args_count == 1:
-    first_arg = extra_args[0]
-    if first_arg.strip() in ("--help", "-h"):
-        print_usage()
 
 if extra_args_count == 3:
     arg_one, arg_two, arg_three = extra_args

@@ -3,17 +3,19 @@ from argparse import ArgumentParser, Namespace
 
 from .banner import Banner
 
-APP_DESCRIPTION_TEXT = "Show a fancy banner using ASCII art."
-FONT_OPT_HELP_TEXT = "Suggest a font for the banner text."
+PROGRAM_NAME = f"{__package__}.useargparse"
 
 parser = ArgumentParser(
-    description=APP_DESCRIPTION_TEXT, prog=f"{__package__}.useargparse"
+    description="Show a fancy banner with a HEADLINE using ASCII art.",
+    prog=f"{PROGRAM_NAME}",
 )
-parser.add_argument("headline", metavar="HEADLINE", type=str)
+parser.add_argument(
+    "headline", metavar="HEADLINE", type=str, help="The banner headline."
+)
 parser.add_argument(
     "--font",
     type=str,
-    help=FONT_OPT_HELP_TEXT,
+    help="Suggest a font for the banner text.",
 )
 
 if __name__ == "__main__":

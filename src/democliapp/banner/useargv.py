@@ -6,23 +6,23 @@ from .banner import Banner
 PROGRAM_NAME = f"{__package__}.useargv"
 
 DESCRIPTION_TEXT = """\
-Show a fancy banner using ASCII art. You may provide the optional
-argument FONT-NAME to suggest a font for the banner text. The app
-will use the most appropriate font style based on the FONT-NAME."""
+  Show a fancy banner with a HEADLINE using ASCII art.
+
+Positional arguments:
+  HEADLINE:     The banner headline.
+  font-name:    Suggest a font for the banner text.
+"""
 
 BAD_USAGE_MESSAGE = f"""\
-Incorrect command invocation. Use {PROGRAM_NAME} -h to see the the
+Incorrect command invocation. Use {PROGRAM_NAME} to see the the
 program correct usage."""
 
 
 def print_usage():
     """Show how to use the program."""
-    print(f"Usage: {PROGRAM_NAME} [-h] HEADLINE [FONT-NAME]")
+    print(f"Usage: {PROGRAM_NAME} HEADLINE [font-name]")
     print()
     print(DESCRIPTION_TEXT)
-    print()
-    print("Options")
-    print("  -h, --help: show this help message and exit.")
 
 
 def get_cli_arguments():
@@ -39,13 +39,6 @@ def get_cli_arguments():
         print(BAD_USAGE_MESSAGE)
         # Finish the program with an error status code.
         sys.exit(1)
-
-    if args_count == 1:
-        first_arg = args[0]
-        if first_arg.strip() in ("--help", "-h"):
-            print_usage()
-            # Finish the program with a SUCCESS status code.
-            sys.exit(0)
     if args_count == 2:
         headline, font_name = args
     else:
