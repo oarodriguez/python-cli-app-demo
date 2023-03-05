@@ -34,6 +34,7 @@ def get_cli_arguments():
     args_count = len(args)
     if not args_count:
         print_usage()
+        # Print the help and finish the program with a success status code.
         sys.exit(0)
     if args_count > 2:
         print(BAD_USAGE_MESSAGE)
