@@ -13,7 +13,7 @@ class Banner:
     """A banner built using ASCII art."""
 
     headline: str
-    font_name: str = "too big"
+    font_name: str | None = None
 
     def __post_init__(self):
         """Post initialization tasks."""
