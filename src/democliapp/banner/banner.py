@@ -1,5 +1,6 @@
 """Routines to generate ASCII banners."""
 from dataclasses import dataclass
+from typing import Optional
 
 from art import text2art
 
@@ -13,7 +14,7 @@ class Banner:
     """A banner built using ASCII art."""
 
     headline: str
-    font_name: str | None = None
+    font_name: Optional[str] = None
 
     def __post_init__(self):
         """Post initialization tasks."""
